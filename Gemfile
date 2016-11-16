@@ -1,19 +1,13 @@
 source 'https://rubygems.org'
 
-gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
-gem 'sqlite3'
-gem 'puma', '~> 3.0'
-gem 'sass-rails', '~> 5.0'
-gem 'uglifier', '>= 1.3.0'
-# See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
 gem 'jquery-rails'
+gem 'poltergeist', '~> 1.11'
+gem 'puma', '~> 3.0'
+gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
+gem 'sass-rails', '~> 5.0'
+gem 'sqlite3'
 gem 'turbolinks', '~> 5'
-# Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 3.0'
-
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+gem 'uglifier', '>= 1.3.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
