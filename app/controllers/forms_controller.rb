@@ -45,6 +45,6 @@ class FormsController < ApplicationController
   end
 
   def form_params
-    params.require(:form).permit(:name, :url, :confirmation_url, :active)
+    params.require(:form).permit :active, :confirmation_url, :name, :trigger_frequency, :url
   end
 end
