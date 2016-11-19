@@ -4,7 +4,7 @@ class CreateForms < ActiveRecord::Migration[5.0]
       t.string :name
       t.string :url
       t.string :confirmation_url
-      t.boolean :active
+      t.boolean :active, default: true
 
       t.timestamps
     end
