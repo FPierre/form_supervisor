@@ -18,3 +18,17 @@
 # end
 
 # Learn more: http://github.com/javan/whenever
+
+require "./#{File.dirname(__FILE__)}/environment.rb"
+
+# Logs
+set :output, "#{path}/log/cron.log"
+
+# TODO select only active forms
+@forms = Form.all
+
+@forms.each do |form|
+  every form.trigger_frequency.to_sym do
+    runner 'form.send_reminder'
+  end
+end
