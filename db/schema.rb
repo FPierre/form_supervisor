@@ -16,9 +16,10 @@ ActiveRecord::Schema.define(version: 20161119124214) do
     t.string   "name"
     t.string   "url"
     t.string   "confirmation_url"
-    t.boolean  "active",           default: true
-    t.datetime "created_at",                      null: false
-    t.datetime "updated_at",                      null: false
+    t.boolean  "active",            default: true
+    t.string   "trigger_frequency"
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
   end
 
 end
