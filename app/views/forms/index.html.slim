@@ -1,0 +1,25 @@
+p#notice = notice
+
+h1 Forms
+
+table
+  thead
+    tr
+      th Name
+      th URL
+      th Confirmation URL
+      th Active
+      th colspan='3'
+
+  tbody
+    - @forms.each do |form|
+      tr
+        td = form.name
+        td = form.url
+        td = form.confirmation_url
+        td = form.active
+        td = link_to 'Show', form
+        td = link_to 'Edit', edit_form_path(form)
+        td = link_to 'Destroy', form, method: :delete, data: { confirm: 'Are you sure?' }
+
+= link_to 'New Form', new_form_path
