@@ -1,0 +1,22 @@
+<%= form_for(validation_pattern) do |f| %>
+  <% if validation_pattern.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(validation_pattern.errors.count, "error") %> prohibited this validation_pattern from being saved:</h2>
+
+      <ul>
+      <% validation_pattern.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

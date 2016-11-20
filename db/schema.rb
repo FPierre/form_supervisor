@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161119124214) do
+ActiveRecord::Schema.define(version: 20161120215835) do
 
   create_table "forms", force: :cascade do |t|
     t.string   "name"
@@ -20,6 +20,12 @@ ActiveRecord::Schema.define(version: 20161119124214) do
     t.string   "trigger_frequency"
     t.datetime "created_at",                       null: false
     t.datetime "updated_at",                       null: false
+  end
+
+  create_table "validation_patterns", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

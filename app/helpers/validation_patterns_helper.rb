@@ -1,0 +1,2 @@
+module ValidationPatternsHelper
+end

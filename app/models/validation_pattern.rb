@@ -1,0 +1,2 @@
+class ValidationPattern < ApplicationRecord
+end
