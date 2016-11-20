@@ -1,10 +1,14 @@
 doctype html
-html
+html lang='en'
   head
+    meta charset='utf-8'
+    meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'
+    meta http-equiv='x-ua-compatible' content='ie=edge'
+
     title FormSupervisor
     = csrf_meta_tags
 
     = stylesheet_link_tag fingerprinted_asset('application'), media: 'all'
     = javascript_include_tag fingerprinted_asset('application')
-  body
+  body class='#{controller_name.demodulize} #{action_name}'
     = yield
