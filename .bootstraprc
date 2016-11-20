@@ -1,5 +1,5 @@
 bootstrapVersion: 4
-loglevel: disabled
+loglevel: debug
 styleLoaders:
   - style
   - css

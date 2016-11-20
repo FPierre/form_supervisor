@@ -2,26 +2,31 @@
   - if form.errors.any?
     #error_explanation
       h2
-        = pluralize(form.errors.count, "error")
+        = pluralize(form.errors.count, 'error')
         |  prohibited this form from being saved:
 
       ul
         - form.errors.full_messages.each do |message|
           li = message
 
-  = f.label :name
-  = f.text_field :name
+  .field
+    = f.label :name
+    = f.text_field :name
 
-  = f.label :url
-  = f.text_field :url
+  .field
+    = f.label :url
+    = f.text_field :url
 
-  = f.label :confirmation_url
-  = f.text_field :confirmation_url
+  .field
+    = f.label :confirmation_url
+    = f.text_field :confirmation_url
 
-  = f.label :active
-  = f.check_box :active
+  .field
+    = f.label :active
+    = f.check_box :active
 
-  = f.label :trigger_frequency
-  = f.text_field :trigger_frequency
+  .field
+    = f.label :trigger_frequency
+    = f.text_field :trigger_frequency
 
   = f.submit
