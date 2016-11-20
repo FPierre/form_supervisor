@@ -1,5 +1,8 @@
-html {
-  body {
-    background-color: #daa;
-  }
-}
+// @import 'base/*';
+@import 'base/fonts';
+@import 'base/global';
+
+// @import 'app/assets/stylesheets/components/**/*';
+// @import 'app/assets/stylesheets/layouts/**/*';
+// @import 'app/assets/stylesheets/shared/**/*';
+// @import 'app/assets/stylesheets/views/**/*';
