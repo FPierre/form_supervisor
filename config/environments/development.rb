@@ -43,6 +43,9 @@ Rails.application.configure do
   # Deprecated by Webpack
   config.assets.debug = false
 
+  # Required for Webpack
+  config.assets.compile = false
+
   # Suppress logger output for asset requests.
   config.assets.quiet = true
 
