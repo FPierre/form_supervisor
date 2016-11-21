@@ -10,7 +10,7 @@ module.exports = {
   context: __dirname + '/app/assets',
 
   entry: {
-    application: ['./javascripts/application.js', './stylesheets/application.scss']
+    application: ['./javascripts/application.js', './stylesheets/application.scss', 'bootstrap-loader']
   },
 
   output: {
@@ -36,7 +36,7 @@ module.exports = {
   },
 
   plugins: [
-    new ExtractTextPlugin(css_output_template),
+    new ExtractTextPlugin(css_output_template, { allChunks: true }),
 
     function () {
       // Delete previous outputs

@@ -1,0 +1,8 @@
+p#notice = notice
+
+main
+  | Name: #{@validation_pattern.name}
+
+.actions
+  = link_to 'Edit', edit_validation_pattern_path(@validation_pattern)
+  = link_to 'Back', validation_patterns_path

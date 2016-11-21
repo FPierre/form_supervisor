@@ -1,0 +1,10 @@
+header.header
+  h1 Editing Validation Pattern
+  h2
+
+main
+  = render 'form', validation_pattern: @validation_pattern
+
+.actions
+  = link_to 'Show', @validation_pattern
+  = link_to 'Back', validation_patterns_path

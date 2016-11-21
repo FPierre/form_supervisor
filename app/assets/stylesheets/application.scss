@@ -9,71 +9,82 @@
 
 // TODO move in base/_variables.scss
 $black: #34314c;
+$grey: lighten($black, 22%);
 $red: #ff7473;
 $green: #218380;
 
 $font-color: $black;
-$font-color-lighten: lighten($black, 22%);
+$font-color-lighten: $grey;
 
 // TODO move in base/_global.scss
 html {
   body {
     font-family: 'Raleway', sans-serif;
     background-color: #fff;
-  }
 
-  .header {
-    h1 {
+    .header {
+      h1 {
+        margin-top: 5rem;
+        text-align: center;
+        // TODO override Bootstrap default style instead?
+        color: $font-color;
+        font-size: 2.4rem;
+      }
+
+      h2 {
+        text-align: center;
+        font-size: 1.3rem;
+        // TODO override Bootstrap default style instead?
+        color: $font-color-lighten;
+      }
+    }
+
+    main {
       margin-top: 5rem;
-      text-align: center;
-      // TODO override Bootstrap default style instead?
-      color: $font-color;
-      font-size: 2.4rem;
     }
 
-    h2 {
-      text-align: center;
-      font-size: 1.3rem;
-      // TODO override Bootstrap default style instead?
-      color: $font-color-lighten;
-    }
-  }
+    form {
+      width: 20%;
+      margin: {
+        left: auto;
+        right: auto;
+      }
 
-  form {
-    width: 20%;
-    margin: {
-      left: auto;
-      right: auto;
-    }
+      .field {
+        margin: 1.6rem auto 0;
 
-    .field {
-      margin: 1.6rem auto 0;
+        label {
+          display: block;
+          margin-bottom: .2rem;
+        }
 
-      label {
+        input[type=text] {
+          width: 100%;
+          height: 2.2rem;
+          margin: 0 auto;
+          padding: 0 .5rem;
+        }
+      }
+
+      input[type=submit] {
         display: block;
-        margin-bottom: .2rem;
-      }
+        margin: 3rem auto 0;
+        padding: .5rem 1rem;
+        color: #fff;
+        background-color: $green;
+        border: none;
+        border-radius: .1rem;
 
-      input[type=text] {
-        width: 100%;
-        height: 2.2rem;
-        margin: 0 auto;
-        padding: 0 .5rem;
+        &:hover {
+
+        }
       }
     }
 
-    input[type=submit] {
-      display: block;
-      margin: 3rem auto 0;
-      padding: .5rem 1rem;
-      color: #fff;
-      background-color: $green;
-      border: none;
-      border-radius: .1rem;
-
-      &:hover {
-
-      }
+    .actions {
+      display: flex;
+      justify-content: center;
+      margin-top: 5rem;
     }
   }
 }
@@ -119,28 +130,14 @@ html {
       }
     }
   }
-
-  .actions {
-    display: flex;
-    justify-content: center;
-    margin-top: 5rem;
-
-    .new-form-link {
-
-    }
-  }
 }
 
 // TODO move in views/forms/_index.scss.
 .forms.new {
-  main {
-    margin-top: 5rem;
-  }
+
 }
 
 // TODO move in views/forms/_index.scss.
 .forms.edit {
-  main {
-    margin-top: 5rem;
-  }
+
 }

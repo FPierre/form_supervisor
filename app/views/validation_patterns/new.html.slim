@@ -1,0 +1,9 @@
+header.header
+  h1 New Validation Pattern
+  h2 Create a way to validate forms
+
+main
+  = render 'form', validation_pattern: @validation_pattern
+
+.actions
+  = link_to 'Back', validation_patterns_path
